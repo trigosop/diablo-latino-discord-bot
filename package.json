@@ -1,0 +1,28 @@
+{
+  "name": "diablo-latino-discord-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for Diablo Latino server",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src/",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trigosop/diablo-latino-discord-bot.git"
+  },
+  "keywords": [],
+  "author": "Piero Trigoso <trigosop@gmail.com> (https://webelopers.com.ar/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trigosop/diablo-latino-discord-bot/issues"
+  },
+  "homepage": "https://github.com/trigosop/diablo-latino-discord-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0"
+  }
+}
