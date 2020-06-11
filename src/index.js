@@ -1,5 +1,14 @@
 const Discord = require('discord.js');
 require('dotenv').config();
+const http = require('http');
+
+http
+  .createServer((req, res) => {
+    res.writeHead(200, { 'Content-type': 'text/plain' });
+    res.write('hey!');
+    res.end();
+  })
+  .listen(process.env.PORT || 8000);
 
 const commandHandler = require('./commands');
 
