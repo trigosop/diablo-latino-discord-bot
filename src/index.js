@@ -8,17 +8,15 @@ http
     res.write('hey!');
     res.end();
   })
-  .listen(process.env.PORT || 8000);
-
-const commandHandler = require('./commands');
+  .listen(process.env.PORT || 80);
 
 const client = new Discord.Client();
+
+client.login(process.env.BOT_TOKEN);
 
 client.once('ready', () => {
   console.log('BOT READY 🤖!');
 });
-
-client.on('message', commandHandler);
 
 client.on('guildMemberAdd', async (member) => {
   await member.send(
@@ -26,4 +24,5 @@ client.on('guildMemberAdd', async (member) => {
   );
 });
 
-client.login(process.env.BOT_TOKEN);
+// const commandHandler = require('./commands');
+// client.on('message', commandHandler);
